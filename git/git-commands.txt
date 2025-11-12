@@ -5,3 +5,17 @@ git add .
 git commit -m 'Some text'
 
 git push origin main
+
+
+### !!! Add the file to .gitignore so it never gets added by mistake:
+### !!! Do NOT run git add Data/after_model_building.pkl again.
+### !!! Keep the file local only or store it on Google Drive if needed.
+echo "Data/after_model_building.pkl" >> .gitignore
+git add .gitignore
+git commit -m "Ignore large pickle file"
+git push
+
+
+
+### !!! Not recommended
+git push origin --force
